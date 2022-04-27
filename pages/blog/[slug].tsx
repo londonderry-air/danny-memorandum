@@ -13,7 +13,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import { StackText } from "../../components/common/text/stack";
 import styled from "styled-components";
 import { Link } from "../../components/common/link/common";
-import { zeroPadding } from "../../utils/string";
+import { getMonthText, zeroPadding } from "../../utils/string";
 
 export const Page = () => {
   const colors = useRecoilValue(themeState);
@@ -79,7 +79,7 @@ export const Page = () => {
                 family={"Zen Kaku Gothic New"}
                 color={colors.text}
               >
-                Feb 9, 2021
+                {getMonthText(new Date(post.from))}
               </_Word>
             </FlexBox>
           </FlexBox>
