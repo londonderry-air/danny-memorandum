@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   return (
     <FlexBox way={"column"}>
       <Header />
-      <FlexBox way={"row"}>
+      <FlexBox width={"100%"} way={"row"}>
         <_BlogList posts={posts} />
       </FlexBox>
     </FlexBox>
@@ -37,7 +37,7 @@ const Header = () => {
       justifyContent={"space-between"}
       margin={"10vh 0 0 0"}
     >
-      <FlexBox way={"column"} gap={"6px"}>
+      <FlexBox width={"100%"} way={"column"} gap={"6px"}>
         <_MainH
           color={colors.text}
           family={"Zen Kaku Gothic New"}
