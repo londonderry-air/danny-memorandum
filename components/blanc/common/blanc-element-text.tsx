@@ -18,7 +18,7 @@ export const BlancCommonText = (props: BlancCommonTextProps) => {
         data={props.data}
         color={colors.text}
         font={{
-          size: isMQ ? moduler(0) : moduler(-1),,
+          size: isMQ ? moduler(0) : moduler(-1),
           weight: isMQ ? "500" : "400",
           family: "Zen Kaku Gothic New",
         }}
