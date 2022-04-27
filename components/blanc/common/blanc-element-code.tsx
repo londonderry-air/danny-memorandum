@@ -10,10 +10,8 @@ import {
 import { moduler } from "../../../utils/typo";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export const BlancCommonCode = (props: { data: BlancCommonCodeProps }) => {
-  const isMQ = useMediaQuery()
   
   if (!props.data.data) {
     props.data.data = {};
@@ -62,8 +60,7 @@ export const BlancCommonCode = (props: { data: BlancCommonCodeProps }) => {
             customStyle={{
               margin: "0",
               padding: "2em 1em",
-              fontSize: isMQ ? moduler(2) : moduler(0),
-              fontFamily: "Zen Kaku Gothic New",
+              fontSize: moduler(0),
               letterSpacing: "0.06em",
               lineHeight: "2em",
             }}
