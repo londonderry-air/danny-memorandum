@@ -7,9 +7,11 @@ import {
 } from "../base/blanc-element-text";
 import { themeState } from "../../../state/atoms";
 import { useRecoilValue } from "recoil";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export const BlancCommonText = (props: BlancCommonTextProps) => {
   const colors = useRecoilValue(themeState);
+  const isMQ = useMediaQuery()
   return (
     <AlignBox align={"center"} maxWidth={"60ch"} margin={"0 0 30px 0"}>
       <BlancElementText
