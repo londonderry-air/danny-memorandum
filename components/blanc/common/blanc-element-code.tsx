@@ -74,7 +74,7 @@ export const BlancCommonCode = (props: { data: BlancCommonCodeProps }) => {
             customStyle={{
               margin: "0",
               padding: "2em 1em",
-              fontSize: isMQ ? moduler(-2) : moduler(-1),
+              fontSize: isMQ ? moduler(-3) : moduler(-1),
             }}
           >
             {props.data.data.code.text}
