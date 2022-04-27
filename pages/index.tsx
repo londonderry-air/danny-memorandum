@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <FlexBox way={"column"}>
+    <FlexBox width={"100%"} way={"column"}>
       <Header />
       <FlexBox width={"100%"} way={"row"}>
         <_BlogList posts={posts} />
