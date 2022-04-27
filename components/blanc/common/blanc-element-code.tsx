@@ -9,7 +9,7 @@ import {
 } from "../base/blanc-element-text";
 import { moduler } from "../../../utils/typo";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { atomOneDark, xcode } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 export const BlancCommonCode = (props: { data: BlancCommonCodeProps }) => {
   
@@ -27,12 +27,23 @@ export const BlancCommonCode = (props: { data: BlancCommonCodeProps }) => {
       margin={"0 0 2em 0"}
       radius={"4px"}
     >
+      <BorderBox
+          width={"100%"}
+          borderWidth={"2px"}
+          borderStyle={"solid"}
+          borderPosition={"all"}
+          borderColor={"rgb(40, 44, 52)"}
+          background={"#DEFF4A"}
+          radius={'12px'}
+          overflow={{x: 'hidden', y: 'hidden'}}
+          padding={"0"}
+        >
       <FlexBox way={"column"} width={"100%"}>
         <BorderBox
           width={"100%"}
-          borderWidth={"3px"}
+          borderWidth={"2px"}
           borderStyle={"solid"}
-          borderPosition={"all"}
+          borderPosition={"bottom"}
           borderColor={"rgb(40, 44, 52)"}
           background={"#DEFF4A"}
           padding={"0"}
@@ -60,15 +71,14 @@ export const BlancCommonCode = (props: { data: BlancCommonCodeProps }) => {
             customStyle={{
               margin: "0",
               padding: "2em 1em",
-              fontSize: moduler(0),
-              letterSpacing: "0.06em",
-              lineHeight: "2em",
+              fontSize: moduler(-1),
             }}
           >
             {props.data.data.code.text}
           </SyntaxHighlighter>
         </BorderBox>
       </FlexBox>
+      </BorderBox>
     </AlignBox>
   );
 };
