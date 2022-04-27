@@ -7,17 +7,19 @@ import {
 } from "../base/blanc-element-text";
 import { themeState } from "../../../state/atoms";
 import { useRecoilValue } from "recoil";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export const BlancCommonText = (props: BlancCommonTextProps) => {
   const colors = useRecoilValue(themeState);
+  const isMQ = useMediaQuery()
   return (
     <AlignBox align={"center"} maxWidth={"60ch"} margin={"0 0 30px 0"}>
       <BlancElementText
         data={props.data}
         color={colors.text}
         font={{
-          size: moduler(-1),
-          weight: "400",
+          size: isMQ ? moduler(0) : moduler(-1),,
+          weight: isMQ ? "500" : "400",
           family: "Zen Kaku Gothic New",
         }}
         markup={"p"}
