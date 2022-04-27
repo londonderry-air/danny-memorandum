@@ -10,6 +10,7 @@ import { Link } from "../common/link/common";
 import styled from "styled-components";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { StackText } from "../common/text/stack";
+import { getMonthText } from "../../utils/string";
 
 export const _BlogListItem = (props: { post: Post }) => {
   const colors = useRecoilValue(themeState);
@@ -71,7 +72,7 @@ export const _BlogListItem = (props: { post: Post }) => {
                   family={"Zen Kaku Gothic New"}
                   color={colors.text}
                 >
-                  Feb 9, 2021
+                  {getMonthText(new Date(props.post.from))}
                 </_Word>
               </FlexBox>
             </FlexBox>
